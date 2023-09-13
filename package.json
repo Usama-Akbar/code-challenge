@@ -4,7 +4,10 @@
   },
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "cd backend && npm run dev", 
-    "client": "cd frontend && npm start" 
+    "install": "concurrently \"npm run install-frontend\" \"npm run install-backend\"",
+    "install-frontend": "cd frontend && npm install",
+    "install-backend": "cd backend && npm install",
+    "server": "cd backend && npm run dev",
+    "client": "cd frontend && npm start"
   }
 }
